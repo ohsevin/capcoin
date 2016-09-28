@@ -6,6 +6,9 @@
 * supports the full GET API
 * sockets: upcoming
 
+
+![capcoin cli](./capcoin-cli.png "Comes with charts")
+
 ## Usage
 
 * capcoin coins - Supported coins
@@ -14,6 +17,7 @@
 * capcoin global - global data
 * capcoin page - detail data
 * capcoin history - history data
+* capcoin charts - history data
 
 
 ```bash
