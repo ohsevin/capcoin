@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+var program = require('commander');
+
+program
+  .description('Check global stats')
+  .option('--json', 'only JSON output')
+  .usage('[options]')
+
+var cli = require('../cli')(program);
+
+cli
+  .commands
+  .global()
+  .then(cli.helpers.verticalTable)
+  .catch(console.error)
