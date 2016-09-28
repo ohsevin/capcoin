@@ -2,22 +2,33 @@
 const assert = require('chai').assert;
 var exec = require('child-process-promise').exec;
 
+var commands =
+ ['./bin/capcoin -h',
+'./bin/capcoin coins -h',
+'./bin/capcoin front -h',
+'./bin/capcoin global -h',
+'./bin/capcoin history -h',
+'./bin/capcoin map -h',
+'./bin/capcoin page -h',
 
 
-var commands = './bin/capcoin -h';
+];
 
 describe('capcoin', function() {
 
-  it('executes main help', function(done) {
-    exec(commandMain)
+  it('executes help', function(done) {
+
+    function execAndDone(command){
+      return exec(command).catch(done)
+    }
+
+    commands = commands.map(execAndDone);
+    Promise
+      .all(commands)
       .then(function (result) {
-          var stdout = result.stdout;
-          var stderr = result.stderr;
-          assert.ok(stdout);
-          assert.notOk(stderr);
+          result.map(assert.ok)
           done();
-      })
-      .catch(done);
+      }).catch(done);
   }).timeout(5000);
 
 
