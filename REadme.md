@@ -1,5 +1,7 @@
 # capcoin - A cli interface for coincap
 
+[![npm version](https://badge.fury.io/js/capcoin.svg)](https://badge.fury.io/js/capcoin) [![Build Status](https://travis-ci.org/sebs/capcoin.svg?branch=master)](https://travis-ci.org/sebs/capcoin) [![Code Climate](https://codeclimate.com/github/sebs/capcoin/badges/gpa.svg)](https://codeclimate.com/github/sebs/capcoin)
+
 * Outputs JSON
 * supports the full GET API
 * sockets: upcoming
