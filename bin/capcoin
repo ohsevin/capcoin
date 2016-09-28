@@ -14,6 +14,7 @@ program
   .command('global', 'Global data')
   .command('coins', 'All supported coins')
   .command('map', 'JSON object of Coin symbols/names and known aliases')
+  .command('front', 'Front Page Data of current coin stats')
   .parse(process.argv);
 
 // print help with no args

@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+var program = require('commander');
+
+program
+  .description('Front Page Data of current coin statss')
+  .option('--json', 'Only JSON output')
+  .option('--xcp', 'All supported XCP assets')
+  .usage('[options]')
+
+var cli = require('../cli')(program);
+
+var outputFunction = cli.helpers.horizontalTable;
+if (program.json) {
+  outputFunction = cli.helpers.json;
+}
+
+var command = cli.commands.front;
+if (program.xcp) {
+  command = cli.commands.frontXcp;
+}
+
+command()
+  .then(outputFunction)
+  .catch(console.error)
