@@ -39,6 +39,7 @@ var config = {
 
 function displayChart(result) {
   var data = result[program.type];
+  config.caption = program.args[0] + ' ' + program.type;
   data = data.map(function(item, index) {
     return [index, item[1]]
   });
