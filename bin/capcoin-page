@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+var program = require('commander');
+
+program
+  .description('Coin symbols/names and known aliases')
+  .usage('[options] <SYMBOL>')
+  .option('--json', 'only JSON output')
+
+var cli = require('../cli')(program);
+
+// print help with no args
+if (program.args.length < 1 || program.args[0] == '') {
+  program.help();
+}
+
+var outputFunction = cli.helpers.verticalTable;
+if (program.json) {
+  outputFunction = cli.helpers.json;
+}
+
+cli
+  .commands
+  .page(program.args[0])
+  .then(function(item) {
+    delete item.price;
+    delete item.market_cap;
+    return item;
+  })
+  .then(outputFunction)
+  .catch(console.error)
