@@ -12,6 +12,7 @@ program.version(version, '-v, --version');
 program
   .description('Capcoin - A explorer for Coincap.io')
   .command('global', 'Global data')
+  .command('map', 'JSON object of Coin symbols/names and known aliases')
   .parse(process.argv);
 
 // print help with no args
