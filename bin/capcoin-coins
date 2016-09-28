@@ -2,7 +2,7 @@
 var program = require('commander');
 
 program
-  .description('Check global stats')
+  .description('Supported coins')
   .option('--json', 'Only JSON output')
   .option('--xcp', 'All supported XCP assets')
   .option('--all', 'All XCP assets known')

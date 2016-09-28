@@ -2,7 +2,7 @@
 var program = require('commander');
 
 program
-  .description('Check global stats')
+  .description('Coin symbols/names and known aliases')
   .option('--json', 'only JSON output')
   .usage('[options]')
 
