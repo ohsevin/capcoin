@@ -23,5 +23,5 @@ capcoin history -t 90day XXX --json
 ## Install
 
 ```bash
-npm install coincap -g
+npm install capcoin -g
 ```
