@@ -3,7 +3,9 @@ var program = require('commander');
 
 program
   .description('Check global stats')
-  .option('--json', 'only JSON output')
+  .option('--json', 'Only JSON output')
+  .option('--xcp', 'All supported XCP assets')
+  .option('--all', 'All XCP assets known')
   .usage('[options]')
 
 var cli = require('../cli')(program);
@@ -13,8 +15,15 @@ if (program.json) {
   outputFunction = cli.helpers.json;
 }
 
-cli
-  .commands
-  .coins()
+var command = cli.commands.coins;
+if (program.xcp) {
+  command = cli.commands.coinsXcp;
+
+  if (program.all) {
+    command = cli.commands.coinsXcpAll;
+  }
+}
+
+command()
   .then(outputFunction)
   .catch(console.error)
