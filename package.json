@@ -10,8 +10,7 @@
     "test": "mocha",
     "lint": "jshint lib test",
     "preversion": "npm run lint",
-    "postversion": "git push && git push --tags",
-    "build": "npm run test && npm run docs"
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
