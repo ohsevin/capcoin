@@ -17,6 +17,8 @@ program
   .command('front', 'Front Page Data of current coin stats')
   .command('page', 'Front Page Data of current coin stats')
   .command('history', 'history')
+  .command('charts', 'history as charts')
+
   .parse(process.argv);
 
 // print help with no args

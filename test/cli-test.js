@@ -10,6 +10,8 @@ var commands =[
   './bin/capcoin history -h',
   './bin/capcoin map -h',
   './bin/capcoin page -h',
+  './bin/capcoin charts -h',
+
 ];
 
 describe('capcoin', function() {

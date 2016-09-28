@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+var program = require('commander');
+var allowed = ['1day', '7day', '30day', '90day', '180day', '365day', 'all'];
+var allowedTypes = ['price', 'volume', 'market_cap'];
+var babar = require('babar');
+
+program
+  .description('Charts')
+  .command('charts', 'charts history')
+  .usage('[options] <SYMBOL>')
+  .option('-t, --timeframe [1day]', 'Choose a time frame ['+allowed.join(',')+']', '1day')
+  .option('--type [price]', 'Choose the data type ['+allowedTypes.join(',')+']', 'price');
+
+var cli = require('../cli')(program);
+
+// print help with no args
+if (program.args.length < 1 || program.args[0] == '') {
+   program.help();
+}
+
+var symbol = program.args[0];
+
+if (!allowed.includes(program.timeframe)) {
+  console.error('unknown timeframe');
+  process.exit(1);
+}
+
+if (!allowedTypes.includes(program.type)) {
+  console.error('unknown type');
+  process.exit(1);
+}
+
+var config = {
+  color: 'green',
+  width: 80,
+  height: 20,
+  yFractions: 1
+};
+
+function displayChart(result) {
+  var data = result[program.type];
+  data = data.map(function(item, index) {
+    return [index, item[1]]
+  });
+  console.log(babar(data, config));
+}
+
+cli
+  .commands
+  .history(program.args[0], program.timeframe)
+  .then(displayChart)
+  .catch(console.error)
