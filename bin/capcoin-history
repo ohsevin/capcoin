@@ -9,8 +9,6 @@ program
 
 var cli = require('../cli')(program);
 
-console.log(program.timeframe);
-
 // print help with no args
 if (program.args.length < 1 || program.args[0] == '') {
    program.help();
