@@ -30,7 +30,7 @@ var commands = program.commands.map(function(command) {
 });
 
 if (!commands.includes(program.args[0])) {
-  console.log('mean: `' + program.rawArgs[2] + '` is not a michikoid command. See `mean --help`.');
+  console.log('mean: `' + program.rawArgs[2] + '` is not a capcoin command. See `mean --help`.');
   console.log();
   process.exit(1);
 }
