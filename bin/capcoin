@@ -16,6 +16,7 @@ program
   .command('map', 'JSON object of Coin symbols/names and known aliases')
   .command('front', 'Front Page Data of current coin stats')
   .command('page', 'Front Page Data of current coin stats')
+  .command('history', 'history')
   .parse(process.argv);
 
 // print help with no args

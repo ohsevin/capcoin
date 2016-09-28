@@ -2,7 +2,7 @@
 var program = require('commander');
 
 program
-  .description('Coin symbols/names and known aliases')
+  .description('Search by symbol (e.g., BTC); returns all data on a specific coin')
   .usage('[options] <SYMBOL>')
   .option('--json', 'only JSON output')
 

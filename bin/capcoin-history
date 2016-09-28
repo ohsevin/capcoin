@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+var program = require('commander');
+var allowed = ['1day', '7day', '30day', '90day', '180day', '365day', 'all'];
+program
+  .description('Coin symbols/names and known aliases')
+  .usage('[options] <SYMBOL>')
+  .option('-t, --timeframe [1day]', 'Choose a time frame ['+allowed.join(',')+']', '1day')
+  .option('--json', 'only JSON output');
+
+var cli = require('../cli')(program);
+
+console.log(program.timeframe);
+
+// print help with no args
+if (program.args.length < 1 || program.args[0] == '') {
+   program.help();
+}
+
+var symbol = program.args[0];
+
+if (!allowed.includes(program.timeframe)) {
+  console.error('unknown timeframe');
+  process.exit(1);
+}
+
+function splitTables(result) {
+   cli.helpers.verticalTable(result.price)
+   cli.helpers.verticalTable(result.volume)
+   cli.helpers.verticalTable(result.market_cap)
+}
+
+var outputFunction = splitTables;
+if (program.json) {
+  outputFunction = cli.helpers.json;
+}
+
+cli
+  .commands
+  .history(program.args[0], program.timeframe)
+  .then(outputFunction)
+  .catch(console.error)
