@@ -8,8 +8,13 @@ program
 
 var cli = require('../cli')(program);
 
+var outputFunction = cli.helpers.horizontalTable;
+if (program.json) {
+  outputFunction = cli.helpers.json;
+}
+
 cli
   .commands
   .map()
-  .then(cli.helpers.horizontalTable)
+  .then(outputFunction)
   .catch(console.error)
