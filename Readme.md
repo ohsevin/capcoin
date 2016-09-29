@@ -18,6 +18,7 @@
 * capcoin page - detail data
 * capcoin history - history data
 * capcoin charts - history data
+* capcoin live - live trades and global data
 
 
 ```bash
