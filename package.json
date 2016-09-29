@@ -37,6 +37,7 @@
     "babar": "0.0.3",
     "cli-table2": "^0.2.0",
     "lodash": "^4.16.2",
-    "restify": "^4.1.1"
+    "restify": "^4.1.1",
+    "socket.io-client": "^1.4.8"
   }
 }

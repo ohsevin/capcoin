@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+var program = require('commander');
+var types = ['global', 'trades'];
+program
+  .description('Live trade and global data as JSON stream')
+  .option('-t, --type [global]', 'Choose a time frame ['+types.join(',')+']', 'global')
+  .usage('[options]')
+
+var cli = require('../cli')(program);
+var io = require('socket.io-client');
+
+function logMessage(message) {
+  console.log(JSON.stringify(message.message))
+}
+
+var socket = io.connect('http://socket.coincap.io');
+socket.on(program.type, logMessage);

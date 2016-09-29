@@ -11,14 +11,14 @@ program.version(version, '-v, --version');
 
 program
   .description('Capcoin - A explorer for Coincap.io')
-  .command('global', 'Global data')
-  .command('coins', 'All supported coins')
-  .command('map', 'JSON object of Coin symbols/names and known aliases')
-  .command('front', 'Front Page Data of current coin stats')
-  .command('page', 'Front Page Data of current coin stats')
-  .command('history', 'history')
   .command('charts', 'history as charts')
-
+  .command('coins', 'All supported coins')
+  .command('front', 'Front Page Data of current coin stats')
+  .command('history', 'history')
+  .command('live', 'Live trades and global data')
+  .command('global', 'Global data')
+  .command('page', 'Front Page Data of current coin stats')
+  .command('map', 'JSON object of Coin symbols/names and known aliases')
   .parse(process.argv);
 
 // print help with no args
