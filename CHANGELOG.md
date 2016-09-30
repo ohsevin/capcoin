@@ -1,12 +1,15 @@
 2016-09-30
 ==========
 
+  * 2.1.3
+  * (churn): fix to version 6
+  * (churn): updated travis file with 4-6 node versions
+  * changelog
   * 2.1.2
   * (test): Added a test for the new changelog functionality
   * (feature): changelog of the project via cli
     * not everye has access to github
     * this way, github commit messages turn into a good form of marketing
-  * changelog
   * 2.1.1
   * (churn): not shipping debug logs anymore
   * 2.1.0
