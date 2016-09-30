@@ -11,6 +11,7 @@ program.version(version, '-v, --version');
 
 program
   .description('Capcoin - A explorer for Coincap.io')
+  .command('changelog', 'Show latest changes')
   .command('charts', 'history as charts')
   .command('coins', 'All supported coins')
   .command('front', 'Front Page Data of current coin stats')

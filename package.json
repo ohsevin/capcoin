@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "babar": "0.0.3",
+    "changelog": "^1.0.7",
     "cli-table2": "^0.2.0",
     "lodash": "^4.16.2",
     "restify": "^4.1.1",
