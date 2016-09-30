@@ -10,7 +10,8 @@
     "test": "mocha",
     "lint": "jshint lib test",
     "preversion": "npm run lint",
-    "postversion": "git push && git push --tags"
+    "changelog": "rm CHANGELOG.md && changelog https://github.com/sebs/capcoin all > CHANGELOG.md && git add . && git commit . -m changelog",
+    "postversion": "git push && git push --tags && npm run changelog && git push "
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
   "homepage": "https://github.com/sebs/capcoin#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "changelog": "^1.0.7",
     "child-process-promise": "^2.1.3",
     "marked-man": "^0.1.5",
     "mocha": "^3.1.0"
