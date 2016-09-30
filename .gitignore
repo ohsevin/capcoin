@@ -5,3 +5,4 @@ build
 .contract_cache
 db.json
 foo.json
+npm-debug.log
