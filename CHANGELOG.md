@@ -1,9 +1,14 @@
 2016-09-30
 ==========
 
+  * 2.1.2
+  * (test): Added a test for the new changelog functionality
+  * (feature): changelog of the project via cli
+    * not everye has access to github
+    * this way, github commit messages turn into a good form of marketing
+  * changelog
   * 2.1.1
   * (churn): not shipping debug logs anymore
-  * changelog
   * 2.1.0
   * (churn): docs
   * (feature): live data in json added
