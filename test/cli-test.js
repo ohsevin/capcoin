@@ -12,6 +12,7 @@ var commands =[
   './bin/capcoin page -h',
   './bin/capcoin charts -h',
   './bin/capcoin live -h',
+  './bin/capcoin changelog -h',
 ];
 
 describe('capcoin', function() {
