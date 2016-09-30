@@ -1,6 +1,6 @@
 {
   "name": "capcoin",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Gets data from coincap.io in the CLI",
   "main": "cli.js",
   "bin": {
