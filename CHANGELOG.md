@@ -1,6 +1,9 @@
 2016-09-30
 ==========
 
+  * 2.1.1
+  * (churn): not shipping debug logs anymore
+  * changelog
   * 2.1.0
   * (churn): docs
   * (feature): live data in json added
