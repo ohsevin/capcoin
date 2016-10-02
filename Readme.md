@@ -1,6 +1,14 @@
-# capcoin - A cli interface for coincap
+# A cli interface for coincap
+
+This command line tool uses the [capcoin.io api](https://github.com/CoinCapDev/CoinCap.io) and displays the data formatted or as json.
 
 [![npm version](https://badge.fury.io/js/capcoin.svg)](https://badge.fury.io/js/capcoin) [![Build Status](https://travis-ci.org/sebs/capcoin.svg?branch=master)](https://travis-ci.org/sebs/capcoin) [![Code Climate](https://codeclimate.com/github/sebs/capcoin/badges/gpa.svg)](https://codeclimate.com/github/sebs/capcoin)
+
+## Install
+
+```bash
+npm install capcoin -g
+```
 
 This little helper extracts the following information from a ethereum JSON RPC host.
 
@@ -41,10 +49,4 @@ This little helper extracts the following information from a ethereum JSON RPC h
 capcoin history -t 90day XXX --json
 90day
 {"market_cap":[],"price":[],"volume":[]}
-```
-
-## Install
-
-```bash
-npm install capcoin -g
 ```
