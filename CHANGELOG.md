@@ -1,10 +1,17 @@
+2016-10-02
+==========
+
+  * 2.1.4
+  * (docs): Install to top
+    * more text
+
 2016-09-30
 ==========
 
+  * changelog
   * 2.1.3
   * (churn): fix to version 6
   * (churn): updated travis file with 4-6 node versions
-  * changelog
   * 2.1.2
   * (test): Added a test for the new changelog functionality
   * (feature): changelog of the project via cli
