@@ -33,7 +33,6 @@ var commands = program.commands.map(function(command) {
 });
 
 if (!commands.includes(program.args[0])) {
-  console.log('mean: `' + program.rawArgs[2] + '` is not a capcoin command. See `mean --help`.');
-  console.log();
+  console.log('capoin: `' + program.rawArgs[2] + '` is not a capcoin command. See `mean --help`.');
   process.exit(1);
 }
