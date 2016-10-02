@@ -1,6 +1,10 @@
 2016-10-02
 ==========
 
+  * 2.1.5
+  * (fix): missing jshint
+  * (fix): dependency commander was missing (ups)
+  * changelog
   * 2.1.4
   * (docs): Install to top
     * more text
