@@ -3,6 +3,7 @@
 This command line tool uses the [capcoin.io api](https://github.com/CoinCapDev/CoinCap.io) and displays the data formatted or as json.
 
 [![npm version](https://badge.fury.io/js/capcoin.svg)](https://badge.fury.io/js/capcoin) [![Build Status](https://travis-ci.org/sebs/capcoin.svg?branch=master)](https://travis-ci.org/sebs/capcoin) [![Code Climate](https://codeclimate.com/github/sebs/capcoin/badges/gpa.svg)](https://codeclimate.com/github/sebs/capcoin)
+[![npm](https://img.shields.io/npm/dt/capcoin.svg?maxAge=2592000)]()
 
 ## Install
 
