@@ -1,9 +1,15 @@
+2016-10-03
+==========
+
+  * 2.1.7
+  * (docs): added download counter badge
+
 2016-10-02
 ==========
 
+  * changelog
   * 2.1.6
   * (fix): naming in error
-  * changelog
   * 2.1.5
   * (fix): missing jshint
   * (fix): dependency commander was missing (ups)
