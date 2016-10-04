@@ -10,6 +10,9 @@ var cli = require('../cli')(program);
 var io = require('socket.io-client');
 
 function logMessage(message) {
+  if (message.length > 2048) {
+    return;
+  }
   console.log(JSON.stringify(message.message))
 }
 
