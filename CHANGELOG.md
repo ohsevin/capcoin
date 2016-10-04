@@ -1,6 +1,9 @@
 2016-10-05
 ==========
 
+  * 2.1.9
+  * (churn): lodash
+  * changelog
   * 2.1.8
   * (fix) possible denial of serveice through unvalidated data in client
 
