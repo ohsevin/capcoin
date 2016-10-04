@@ -1,6 +1,13 @@
+2016-10-05
+==========
+
+  * 2.1.8
+  * (fix) possible denial of serveice through unvalidated data in client
+
 2016-10-03
 ==========
 
+  * changelog
   * 2.1.7
   * (docs): added download counter badge
 
