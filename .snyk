@@ -1,0 +1,13 @@
+version: v1.5.2
+ignore:
+  'npm:cli:20160615':
+    - changelog > cli:
+        reason: None given
+        expires: '2016-11-03T22:53:37.982Z'
+patch:
+  'npm:minimatch:20160620':
+    - changelog > cli > glob > minimatch:
+        patched: '2016-10-04T22:52:32.849Z'
+  'npm:ws:20160624':
+    - socket.io-client > engine.io-client > ws:
+        patched: '2016-10-04T22:52:32.849Z'
