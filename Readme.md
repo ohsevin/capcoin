@@ -11,22 +11,6 @@ This command line tool uses the [capcoin.io api](https://github.com/CoinCapDev/C
 npm install capcoin -g
 ```
 
-This little helper extracts the following information from a ethereum JSON RPC host.
-
-* version
-  * api
-  * node  
-  * network
-* accounts
-* net
-  * peer count
-  * last block
-  * syncing
-  * hashrate
-  * mining
-
-  I needed it, when repeatedly validating and administering different nodes. Have fun with it
-
 * Outputs JSON
 * supports the full GET API
 * sockets: upcoming
