@@ -1,6 +1,14 @@
+2016-10-14
+==========
+
+  * 2.1.11
+  * (docs): added link to feature requests
+
 2016-10-09
 ==========
 
+  * (fix): typo
+  * changelog
   * 2.1.10
   * (fix): readme
 
