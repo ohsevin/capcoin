@@ -9,8 +9,13 @@ var program = require('commander'),
 var version = require('../package').version;
 program.version(version, '-v, --version');
 
+var description =
+`Capcoin - A explorer for Coincap.io
+  Bugreports and Feature Requests: https://github.com/sebs/capcoin/issues
+`;
+
 program
-  .description('Capcoin - A explorer for Coincap.io')
+  .description(description)
   .command('changelog', 'Show latest changes')
   .command('charts', 'history as charts')
   .command('coins', 'All supported coins')
@@ -25,6 +30,7 @@ program
 // print help with no args
 if (program.args.length < 1) {
   program.help();
+  program.exit(1);
 }
 
 // if there is a command, make sure it's valid
