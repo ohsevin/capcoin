@@ -1,6 +1,13 @@
+2017-01-09
+==========
+
+  * 2.1.12
+  * CCHurn: Updated deps
+
 2016-10-14
 ==========
 
+  * changelog
   * 2.1.11
   * (docs): added link to feature requests
 
