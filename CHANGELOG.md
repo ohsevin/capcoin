@@ -1,6 +1,9 @@
 2017-04-04
 ==========
 
+  * 2.1.14
+  * Autorelease
+  * changelog
   * 2.1.13
   * License
 
