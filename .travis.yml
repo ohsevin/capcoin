@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
 env:
-  - CXX=g++-4.8
+- CXX=g++-4.8
 addons:
   apt:
     sources:
@@ -11,3 +11,11 @@ addons:
     - g++-4.8
 notifications:
   email: false
+deploy:
+  provider: npm
+  email: sebs@2xs.org
+  api_key:
+    secure: uBZW4L4XA4D/OS4PoZbe7BdxCp8TvIm3FYz/WwJrponRWjN1DRLF+/fnwOpfwbVNIOQplGIFFT/gkv46mvMh2JdK50sBCRUaxrDrT0VR9YevcvrYroVzpvPMIJJhCf7mM21FaCJJeK9hbSLzwozELxvGUQjaqMCH2cqVUdx60k+TI+ztOeKpBbDFPLYgrAhZOZ5ErfuJpygTDOj71Izsvldgbk1t8eQB8CibkZN2aFPgxEmocgGncKuiPmVarOQqgWN5tnFva9/gtpkKK43JGHOa4NyuViqbsitjLq+EsvOCPVL8zCK+DQ+f6tLtTi4tSHnpkXVxmQ8q5aBZGwRZCmc5TlhnkVGbOsiQMzPM4ygJjNCZcqbXJs/aR14lkybIQzq0sHOCDYPa5WGBtxirsFl9o5KEmPooNtL+huKWIUQvMwCoC/Nnca7WYXXBlC73uJU+LvCrPr4wSLR3yB+dWGhGJO4MjvmeeBaU/DXDC1bDVL4PKc6uPc2ZY/FXVIEYBoz3of1Kmow1HuKVl4Mp3ZqaP9zDMuDL+QL7BojlLYWWjz8Au8uWM7gbp1pD6WYA2U24zHfWAC18OeernlHCIjdB2x/nLk2V+bwTf7wlNaNXKAUQ07NSZi7aAe8QV04oVGfs6EeZygS4YGFlayz3loIv6LD80kHg0uybWwA732M=
+  on:
+    tags: true
+    repo: sebs/capcoin
