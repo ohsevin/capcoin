@@ -1,9 +1,15 @@
+2017-06-02
+==========
+
+  * 2.2.0
+  * Added new node version and a little 'fix' for 8
+
 2017-04-04
 ==========
 
+  * changelog
   * 2.1.14
   * Autorelease
-  * changelog
   * 2.1.13
   * License
 
