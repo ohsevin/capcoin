@@ -38,7 +38,12 @@ var commands = program.commands.map(function(command) {
   return command._name;
 });
 
-if (!commands.includes(program.args[0])) {
+function arrayContains(needle, arrhaystack)
+{
+  return (arrhaystack.indexOf(needle) > -1);
+}
+
+if (!arrayContains(program.args[0], commands)) {
   console.log('capoin: `' + program.rawArgs[2] + '` is not a capcoin command. See `mean --help`.');
   process.exit(1);
 }
