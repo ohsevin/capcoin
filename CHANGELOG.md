@@ -1,6 +1,13 @@
+2017-06-06
+==========
+
+  * 2.2.1
+  * Fixed a bug where some calls would not be displayed
+
 2017-06-02
 ==========
 
+  * changelog
   * 2.2.0
   * Added new node version and a little 'fix' for 8
 
