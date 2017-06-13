@@ -16,7 +16,12 @@ if (program.args.length < 1 || program.args[0] == '') {
 
 var symbol = program.args[0];
 
-if (!allowed.includes(program.timeframe)) {
+function arrayContains(needle, arrhaystack)
+{
+  return (arrhaystack.indexOf(needle) > -1);
+}
+
+if (!arrayContains(program.timeframe, allowed)) {
   console.error('unknown timeframe');
   process.exit(1);
 }
