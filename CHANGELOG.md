@@ -1,6 +1,13 @@
+2017-06-13
+==========
+
+  * 2.2.2
+  * Fixed the other broken es2new statements
+
 2017-06-06
 ==========
 
+  * changelog
   * 2.2.1
   * Fixed a bug where some calls would not be displayed
 
@@ -135,4 +142,3 @@
   * i(feature): simple json
   * (feature): call to map
   * (refactor): use promise
-  * .
