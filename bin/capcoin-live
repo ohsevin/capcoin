@@ -1,19 +1,52 @@
 #!/usr/bin/env node
 var program = require('commander');
 var types = ['global', 'trades'];
+
+var blessed = require('blessed')
+  , contrib = require('blessed-contrib')
+  , screen = blessed.screen();
+
 program
   .description('Live trade and global data as JSON stream')
   .option('-t, --type [global]', 'Choose a time frame ['+types.join(',')+']', 'global')
+  .option('--json', 'only JSON output')
   .usage('[options]')
 
 var cli = require('../cli')(program);
 var io = require('socket.io-client');
 
+var line = contrib.line(
+       { style:
+         { line: "yellow"
+         , text: "green"
+         , baseline: "black"}
+       , xLabelPadding: 3
+       , xPadding: 5
+       , showLegend: true
+       , wholeNumbersOnly: false //true=do not show fraction in y axis
+       , label: 'Title'})
+screen.append(line) //must append before setting data
+
+screen.render();
+
+var messages = [];
+
 function logMessage(message) {
   if (message.length > 2048) {
     return;
   }
-  console.log(JSON.stringify(message.message))
+  messages.push(message);
+  var btc = messages.map(function(item) { return item.message.btcPrice });
+  var cap = messages.map(function(item) { return item.message.btcPrice });
+  var series1 = {
+      title: 'btc',
+      x: btc,
+      y: btc
+   };
+
+
+   line.setData([series1]);
+  screen.render();
 }
 
 var socket = io.connect('http://socket.coincap.io');

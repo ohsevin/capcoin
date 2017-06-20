@@ -67,7 +67,7 @@ function displayChart(result) {
     },
     xLabelPadding: 3,
     xPadding: 5,
-    label: config.caption
+    label: config.caption + ' ' + program.timeframe
   });
 
   var data = {
