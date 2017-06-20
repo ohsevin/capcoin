@@ -1,6 +1,13 @@
+2017-06-20
+==========
+
+  * 2.2.3
+  * churn(deps): updated
+
 2017-06-13
 ==========
 
+  * changelog
   * 2.2.2
   * Fixed the other broken es2new statements
 
@@ -140,5 +147,3 @@
   * (feature): coins
   * 1.1.0
   * i(feature): simple json
-  * (feature): call to map
-  * (refactor): use promise
