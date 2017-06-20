@@ -1,9 +1,12 @@
 2017-06-20
 ==========
 
+  * 2.4.0
+  * Esc
+  * Improved charts and live
+  * changelog
   * 2.3.0
   * Charts with blessed contrib
-  * changelog
   * 2.2.4
   * feature(cli): show changelog in colors
   * 2.2.3
@@ -144,6 +147,3 @@
   * (feature): all api endpoints implemented
   * 1.3.0
   * jshint
-  * (feature): page
-  * 1.2.0
-  * (feature): frontpage
