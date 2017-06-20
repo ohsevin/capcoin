@@ -1,6 +1,9 @@
 2017-06-20
 ==========
 
+  * 2.2.4
+  * feature(cli): show changelog in colors
+  * changelog
   * 2.2.3
   * churn(deps): updated
 
@@ -145,5 +148,3 @@
   * (churn): naming
   * (feature): coin api
   * (feature): coins
-  * 1.1.0
-  * i(feature): simple json
