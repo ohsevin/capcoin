@@ -40,6 +40,8 @@
   },
   "dependencies": {
     "babar": "0.0.3",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.7.5",
     "child-process-promise": "^2.2.0",
     "cli-table2": "^0.2.0",
     "commander": "^2.9.0",

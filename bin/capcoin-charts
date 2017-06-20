@@ -2,7 +2,11 @@
 var program = require('commander');
 var allowed = ['1day', '7day', '30day', '90day', '180day', '365day', 'all'];
 var allowedTypes = ['price', 'volume', 'market_cap'];
-var babar = require('babar');
+
+var blessed = require('blessed')
+  , contrib = require('blessed-contrib')
+  , screen = blessed.screen();
+
 
 program
   .description('Charts')
@@ -42,13 +46,40 @@ var config = {
   yFractions: 1
 };
 
+
 function displayChart(result) {
   var data = result[program.type];
-  config.caption = program.args[0] + ' ' + program.type;
-  data = data.map(function(item, index) {
-    return [index, item[1]]
+  var caption = config.caption = program.args[0] + ' ' + program.type;
+
+  var indexes = data.map(function(item, index) {
+    return index
   });
-  console.log(babar(data, config));
+
+  var items = data.map(function(item, index) {
+    return item[1]
+  });
+
+  var line = contrib.line({
+    style: {
+      line: "yellow",
+      text: "green",
+      baseline: "black"
+    },
+    xLabelPadding: 3,
+    xPadding: 5,
+    label: config.caption
+  });
+
+  var data = {
+   x: indexes,
+   y: items
+  };
+  screen.append(line) //must append before setting data
+  line.setData([data])
+  screen.key(['escape', 'q', 'C-c'], function(ch, key) {
+    return process.exit(0);
+  });
+  screen.render()
 }
 
 cli
