@@ -59,14 +59,15 @@ function displayChart(result) {
     return item[1]
   });
 
+  let min = items.reduce(function(a, b, i, arr) {return Math.min(a,b)});
+  let max = items.reduce(function(a, b, i, arr) {return Math.max(a,b)});
   var line = contrib.line({
     style: {
       line: "yellow",
       text: "green",
       baseline: "black"
     },
-    xLabelPadding: 3,
-    xPadding: 5,
+    minY: min,
     label: config.caption + ' ' + program.timeframe
   });
 
