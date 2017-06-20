@@ -28,7 +28,9 @@ var line = contrib.line(
 screen.append(line) //must append before setting data
 
 screen.render();
-
+screen.key(['escape', 'q', 'C-c'], function(ch, key) {
+  return process.exit(0);
+});
 var messages = [];
 
 function logMessage(message) {
