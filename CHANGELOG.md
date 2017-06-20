@@ -1,9 +1,11 @@
 2017-06-20
 ==========
 
+  * 2.3.0
+  * Charts with blessed contrib
+  * changelog
   * 2.2.4
   * feature(cli): show changelog in colors
-  * changelog
   * 2.2.3
   * churn(deps): updated
 
@@ -145,6 +147,3 @@
   * (feature): page
   * 1.2.0
   * (feature): frontpage
-  * (churn): naming
-  * (feature): coin api
-  * (feature): coins
