@@ -1,9 +1,11 @@
 2017-06-20
 ==========
 
+  * 2.4.2
+  * Give the chart a more reasonable window
+  * changelog
   * 2.4.1
   * Re add the --json on live data
-  * changelog
   * 2.4.0
   * Esc
   * Improved charts and live
@@ -143,6 +145,3 @@
   * 1.5.1
   * fix log
   * 1.5.0
-  * iFix readme location
-  * naming
-  * 1.4.0
