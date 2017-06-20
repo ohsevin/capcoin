@@ -26,11 +26,10 @@ var line = contrib.line(
        , wholeNumbersOnly: false //true=do not show fraction in y axis
        , label: 'Title'})
 screen.append(line) //must append before setting data
-
-screen.render();
 screen.key(['escape', 'q', 'C-c'], function(ch, key) {
   return process.exit(0);
 });
+
 var messages = [];
 
 function logMessage(message) {
@@ -38,6 +37,10 @@ function logMessage(message) {
     return;
   }
   messages.push(message);
+  if (program.json) {
+    console.log(JSON.stringify(message));
+    return
+  }
   var btc = messages.map(function(item) { return item.message.btcPrice });
   var cap = messages.map(function(item) { return item.message.btcPrice });
   var series1 = {
@@ -45,9 +48,7 @@ function logMessage(message) {
       x: btc,
       y: btc
    };
-
-
-   line.setData([series1]);
+  line.setData([series1]);
   screen.render();
 }
 
