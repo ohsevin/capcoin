@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 var program = require('commander');
 
+var marked = require('marked');
+var TerminalRenderer = require('marked-terminal');
+
+marked.setOptions({
+  // Define custom renderer
+  renderer: new TerminalRenderer()
+});
 program
   .description('Outputs the projects changelog')
   .usage('[options]');
@@ -10,15 +17,20 @@ var cli = require('../cli')(program);
 var changelog = require('changelog');
 
 function showChanges(data) {
+  var buffer = [];
   data.versions.forEach(function(version) {
-    console.log(version.version); //currently npm projects only
-    console.log(version.date);    //JS Date
+    let releaseversion = '# '+ version.version + ' ' + version.date;
+    buffer.push(releaseversion);
 
     //version.changes is an array of commit messages for that version
     version.changes.forEach(function(change) {
-      console.log(' * ' + change.message);
+      let changeMessage = ' * ' + change.message;
+      buffer.push(changeMessage);
     });
+    buffer.push('');
   });
+  let changelogText = buffer.join('\n');
+  console.log(marked(changelogText));
   //Information about the project
   //console.log(data.project);
 }
