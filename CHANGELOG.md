@@ -1,10 +1,12 @@
 2017-06-20
 ==========
 
+  * 2.4.1
+  * Re add the --json on live data
+  * changelog
   * 2.4.0
   * Esc
   * Improved charts and live
-  * changelog
   * 2.3.0
   * Charts with blessed contrib
   * 2.2.4
@@ -144,6 +146,3 @@
   * iFix readme location
   * naming
   * 1.4.0
-  * (feature): all api endpoints implemented
-  * 1.3.0
-  * jshint
