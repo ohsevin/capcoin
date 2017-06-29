@@ -1,9 +1,15 @@
+2017-06-29
+==========
+
+  * 2.4.3
+  * churn(deps): update
+
 2017-06-20
 ==========
 
+  * changelog
   * 2.4.2
   * Give the chart a more reasonable window
-  * changelog
   * 2.4.1
   * Re add the --json on live data
   * 2.4.0
@@ -142,6 +148,3 @@
   * docs
   * 1.5.2
   * fix install
-  * 1.5.1
-  * fix log
-  * 1.5.0
