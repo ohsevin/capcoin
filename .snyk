@@ -1,9 +1,12 @@
-version: v1.5.2
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:cli:20160615':
     - changelog > cli:
         reason: None given
         expires: '2016-11-03T22:53:37.982Z'
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - changelog > cli > glob > minimatch:
@@ -11,3 +14,16 @@ patch:
   'npm:ws:20160624':
     - socket.io-client > engine.io-client > ws:
         patched: '2016-10-04T22:52:32.849Z'
+  'npm:marked:20170112':
+    - blessed-contrib > marked:
+        patched: '2017-07-05T10:30:04.794Z'
+    - marked:
+        patched: '2017-07-05T10:30:04.794Z'
+    - marked-man > marked:
+        patched: '2017-07-05T10:30:04.794Z'
+  'npm:ms:20170412':
+    - mocha > debug > ms:
+        patched: '2017-07-05T10:30:04.794Z'
+  'npm:request:20160119':
+    - blessed-contrib > picture-tube > request:
+        patched: '2017-07-05T10:30:04.794Z'
