@@ -1,6 +1,13 @@
+2017-07-05
+==========
+
+  * 2.4.4
+  * chore(snyk): added config
+
 2017-06-29
 ==========
 
+  * changelog
   * 2.4.3
   * churn(deps): update
 
@@ -145,6 +152,3 @@
   * (churn): add test
   * i(churn): added travis build
   * add code climate
-  * docs
-  * 1.5.2
-  * fix install
