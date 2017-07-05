@@ -1,6 +1,9 @@
 2017-07-05
 ==========
 
+  * 2.4.5
+  * chore(deps): Updated to restify 5.0.0 and other deps
+  * changelog
   * 2.4.4
   * chore(snyk): added config
 
@@ -149,6 +152,3 @@
   * 1.5.3
   * (feature): jshint on build
   * (churn): unused build step
-  * (churn): add test
-  * i(churn): added travis build
-  * add code climate
