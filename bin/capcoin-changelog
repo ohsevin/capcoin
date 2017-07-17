@@ -19,7 +19,7 @@ var changelog = require('changelog');
 function showChanges(data) {
   var buffer = [];
   data.versions.forEach(function(version) {
-    let releaseversion = '# '+ version.version + ' ' + version.date;
+    let releaseversion = '# '+ version.date;
     buffer.push(releaseversion);
 
     //version.changes is an array of commit messages for that version
@@ -31,10 +31,8 @@ function showChanges(data) {
   });
   let changelogText = buffer.join('\n');
   console.log(marked(changelogText));
-  //Information about the project
-  //console.log(data.project);
 }
 
 changelog
-  .generate('capcoin')
+  .generate('sebs/capcoin')
     .then(showChanges)

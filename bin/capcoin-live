@@ -24,7 +24,7 @@ var line = contrib.line(
        , xPadding: 5
        , showLegend: true
        , wholeNumbersOnly: false //true=do not show fraction in y axis
-       , label: 'Title'})
+       , label: 'Live Data'})
 screen.append(line) //must append before setting data
 screen.key(['escape', 'q', 'C-c'], function(ch, key) {
   return process.exit(0);
