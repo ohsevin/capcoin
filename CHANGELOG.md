@@ -1,6 +1,12 @@
 2017-07-17
 ==========
 
+  * 2.5.0
+  * Lots of churn ;) good one
+  * moving the clunky hack out of the way
+  * bunch of small fixes
+    * changelog shows stuff
+  * changelog
   * 2.4.6
   * Added Ratio to Graph
 
@@ -146,8 +152,3 @@
   * RM
   * 2.0.1
   * (feature): caption
-  * 2.0.0
-  * graphics
-  * fix
-  * Added image
-  * (feature): charts
