@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 var program = require('commander');
-var allowed = ['1day', '7day', '30day', '90day', '180day', '365day', 'all'];
-var allowedTypes = ['price', 'volume', 'market_cap'];
+var constants = require('../lib/constants');
+var allowed = constants.allowed;
+var allowedTypes = constants.allowedTypes;
 
 var blessed = require('blessed')
   , contrib = require('blessed-contrib')

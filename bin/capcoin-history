@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 var program = require('commander');
-var allowed = ['1day', '7day', '30day', '90day', '180day', '365day', 'all'];
+
+var constants = require('../lib/constants');
+var allowed = constants.allowed;
+
 program
   .description('Coin symbols/names and known aliases')
   .usage('[options] <SYMBOL>')
