@@ -5,6 +5,8 @@
 var program = require('commander'),
   _ = require('lodash');
 
+var arrayContains = require('../lib/array-contains');
+
 // set program version
 var version = require('../package').version;
 program.version(version, '-v, --version');
@@ -37,11 +39,6 @@ if (program.args.length < 1) {
 var commands = program.commands.map(function(command) {
   return command._name;
 });
-
-function arrayContains(needle, arrhaystack)
-{
-  return (arrhaystack.indexOf(needle) > -1);
-}
 
 if (!arrayContains(program.args[0], commands)) {
   console.log('capoin: `' + program.rawArgs[2] + '` is not a capcoin command. See `mean --help`.');
