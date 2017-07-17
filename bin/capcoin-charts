@@ -59,8 +59,9 @@ function displayChart(result) {
     return item[1]
   });
 
-  let min = items.reduce(function(a, b, i, arr) {return Math.min(a,b)});
-  let max = items.reduce(function(a, b, i, arr) {return Math.max(a,b)});
+  let min = items.reduce(function(a, b, i, arr) {return Math.min(a,b)})
+  let max = items.reduce(function(a, b, i, arr) {return Math.max(a,b)})
+
   var line = contrib.line({
     style: {
       line: "yellow",
@@ -68,10 +69,15 @@ function displayChart(result) {
       baseline: "black"
     },
     minY: min,
+    wholeNumbersOnly: false,
+    showLegend: true,
     label: config.caption + ' ' + program.timeframe
   });
 
+  var title = `${Math.round(min)}/${Math.round(max)}`
+
   var data = {
+   title: title,
    x: indexes,
    y: items
   };
