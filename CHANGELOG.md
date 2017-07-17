@@ -1,9 +1,15 @@
+2017-07-17
+==========
+
+  * 2.4.6
+  * Added Ratio to Graph
+
 2017-07-05
 ==========
 
+  * changelog
   * 2.4.5
   * chore(deps): Updated to restify 5.0.0 and other deps
-  * changelog
   * 2.4.4
   * chore(snyk): added config
 
@@ -145,10 +151,3 @@
   * fix
   * Added image
   * (feature): charts
-
-2016-09-28
-==========
-
-  * 1.5.3
-  * (feature): jshint on build
-  * (churn): unused build step
