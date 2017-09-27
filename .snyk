@@ -21,9 +21,20 @@ patch:
         patched: '2017-07-05T10:30:04.794Z'
     - marked-man > marked:
         patched: '2017-07-05T10:30:04.794Z'
+    - marked:
+        patched: '2017-09-27T11:07:40.103Z'
+    - marked-man > marked:
+        patched: '2017-09-27T11:07:40.103Z'
+    - blessed-contrib > marked:
+        patched: '2017-09-27T11:07:40.103Z'
   'npm:ms:20170412':
     - mocha > debug > ms:
         patched: '2017-07-05T10:30:04.794Z'
   'npm:request:20160119':
     - blessed-contrib > picture-tube > request:
         patched: '2017-07-05T10:30:04.794Z'
+    - blessed-contrib > picture-tube > request:
+        patched: '2017-09-27T11:07:40.103Z'
+  'npm:debug:20170905':
+    - mocha > debug:
+        patched: '2017-09-27T11:07:40.103Z'
